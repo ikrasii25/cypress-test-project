@@ -1,0 +1,93 @@
+# =========================
+# Node modules
+# =========================
+node_modules/
+
+# =========================
+# Logs
+# =========================
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Dependency directories
+# =========================
+.pnpm-store/
+.npm/
+
+# =========================
+# Build output
+# =========================
+dist/
+build/
+out/
+coverage/
+
+# =========================
+# TypeScript (if used)
+# =========================
+*.tsbuildinfo
+
+# =========================
+# Cypress
+# =========================
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+cypress/logs/
+
+# Cypress cache
+CypressCache/
+.cypress-cache/
+
+# =========================
+# Environment variables
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Temporary files
+# =========================
+tmp/
+temp/
+.cache/
+
+# =========================
+# Test artifacts
+# =========================
+test-results/
+playwright-report/
+
+# =========================
+# Package manager lockfiles (optional policy)
+# =========================
+# Usually keep package-lock.json
+# If team policy requires ignoring:
+# package-lock.json
+
+# =========================
+# Misc
+# =========================
+*.local
+*.pid
+*.seed
