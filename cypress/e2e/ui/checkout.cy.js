@@ -6,12 +6,12 @@ describe("Checkout Flow", () => {
 
   beforeEach(() => {
 
-    cy.fixture("user").then((user) => {
+    cy.fixture("users").then((user) => {
 
       loginPage.visit()
 
-      loginPage.enterUsername(user.username)
-      loginPage.enterPassword(user.password)
+      loginPage.enterUsername(user[0].username)
+      loginPage.enterPassword(user[0].password)
       loginPage.clickLogin()
 
     })
