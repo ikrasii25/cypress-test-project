@@ -6,8 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix:
-        containers: [1, 2] # Для паралельного запуску
+    #   matrix:
+    #     containers: [1, 2] # Для паралельного запуску
     steps:
       - name: Checkout
         uses: actions/checkout@v6
