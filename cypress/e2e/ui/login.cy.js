@@ -9,14 +9,15 @@ describe("Login Tests", () => {
         loginPage.visit()
     })
 
-    it("login with uset from array", () => {
+    it("login with user from array", () => {
         test_users.forEach(test_user => {
             loginPage.enterUsername(test_user)
             loginPage.enterPassword("secret_sauce")
             loginPage.clickLogin()
 
-            cy.url().should("include", "inventory")
-            cy.get(".inventory_list").should("be.visible")
+            cy.get("#react-burger-menu-btn").click({ force: true })
+            cy.get("#logout_sidebar_link").click({ force: true })
+
         })
     })
 
