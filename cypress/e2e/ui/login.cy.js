@@ -2,9 +2,22 @@ import loginPage from "../../pages/loginPage"
 
 describe("Login Tests", () => {
 
+    const test_users = ["standard_user", "visual_user"]
+
     beforeEach(() => {
         // cy.intercept("**").as("allRequests")
         loginPage.visit()
+    })
+
+    it("login with uset from array", () => {
+        test_users.forEach(test_user => {
+            loginPage.enterUsername(test_user)
+            loginPage.enterPassword(user[0].password)
+            loginPage.clickLogin()
+
+            cy.url().should("include", "inventory")
+            cy.get(".inventory_list").should("be.visible")
+        })
     })
 
 
@@ -55,6 +68,6 @@ describe("Login Tests", () => {
     })
 
     it("new test will be added", () => {
-        
+
     })
 })
