@@ -12,7 +12,7 @@ describe("Login Tests", () => {
     it("login with uset from array", () => {
         test_users.forEach(test_user => {
             loginPage.enterUsername(test_user)
-            loginPage.enterPassword(user[0].password)
+            loginPage.enterPassword("secret_sauce")
             loginPage.clickLogin()
 
             cy.url().should("include", "inventory")
